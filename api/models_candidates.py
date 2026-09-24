@@ -86,7 +86,7 @@ class UpdateCandidateRequest(BaseModel):
 
     resume_text: Optional[NonEmptyStr] = Field(default=None, max_length=50_000)
 
-    candidate_name: Optional[str] = None
+    candidate_name: Optional[NonEmptyStr] = Field(default=None, max_length=200)
     email: Optional[str] = None
     phone: Optional[str] = None
     location: Optional[str] = None
